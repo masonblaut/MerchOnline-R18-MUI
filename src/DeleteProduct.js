@@ -74,8 +74,9 @@ class DeleteProduct extends React.Component {
     render () {
         console.log("DeleteProps", this.props);
         return (
-        <div className="container">
-            <div className='card3'>
+        <div>
+            <div align="center">
+            <h2>Delete Product:</h2>
             <img 
                 src={"../assets/images/"+this.state.productNo}
                 onError={({ currentTarget }) => {
@@ -87,15 +88,15 @@ class DeleteProduct extends React.Component {
             />
             
             <form onSubmit={this.handleFormSubmit}>
-                <div className='form-group'>
-                    <h1>Delete Product {this.state.productName}?</h1><br/>
-                    <p align="center">Price: {this.state.price}</p><br/>
-                    <p align="center">Quantity: {this.state.quantity}</p><br/>
-                    <p align="center">ProductNo: {this.state.productNo}</p><br/>
+                <div align="center">
+                    <h2>Delete Product {this.state.productName}?</h2>
+                    <p align="center">Price: {this.state.price}</p>
+                    <p align="center">Quantity: {this.state.quantity}</p>
+                    <p align="center">ProductNo: {this.state.productNo}</p>
                     <h3 align="center">Are you sure you want to Delete { this.state.productName }?</h3>
+                <button type="button" onClick={this.handleCancel}>Cancel</button>
+                <button type="submit">Submit</button>
                 </div>
-                <button type="button" className="btn btn-light" onClick={this.handleCancel}>Cancel</button>
-                <button type="submit" className="btn btn-primary">Submit</button>
             </form>
             </div>
         </div>)

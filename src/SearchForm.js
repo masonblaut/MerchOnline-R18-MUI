@@ -36,7 +36,7 @@ class SearchForm extends React.Component {
                         name="form-control"
                         label="Search Products:"
                         variant="standard"
-                        color="companyPurple"
+                        color="companyGreen"
                     />
                 </div>
                 

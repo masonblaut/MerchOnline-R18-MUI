@@ -1,4 +1,5 @@
 import React from 'react';
+import { TextField } from '@mui/material';
 
 class FormInput extends React.Component {
     state = {inputData: ""};
@@ -10,10 +11,11 @@ class FormInput extends React.Component {
     }
     
     render () {
-
+        //was used inside of input before it was TextField: onBlur={this.handleChangeData}
+        //<label for={this.props.id}>{this.props.title}</label>
         return (<div>
-            <label for={this.props.id}>{this.props.title}</label>
-            <input onChange={this.handleChangeData} onBlur={this.handleChangeData} value={this.state.inputData} type="text" className="form-control" id={this.props.id} placeholder={this.props.placeholder} />
+            
+            <TextField sx={{m:'.5%'}}onChange={this.handleChangeData} value={this.state.inputData} type="text" id={this.props.id} placeholder={"Enter a new "+this.props.id} label={this.props.placeholder} />
         </div>)
     }
 }

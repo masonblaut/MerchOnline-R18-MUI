@@ -28,11 +28,11 @@ class OneProduct extends React.Component
 
         return (
             <div>
-                <div align="center">
-                <h2>Product Details</h2>
-                    <div className="container" align="center">
-                        <div className="row">
-                            <div className="card2">
+                <div>
+                    <div>
+                        <div>
+                            <div align="center">
+                            <h2>Product Details</h2>
                             <img 
                                 src={"../../assets/images/"+selectedObject.productNo}
                                 onError={({ currentTarget }) => {
@@ -42,15 +42,14 @@ class OneProduct extends React.Component
                                 className="card-img-top"
                                 alt="ProductName"
                             />
-                            <div className="card-body">
-                                <h5 className="card-title">{selectedObject.productName}</h5>
+                            <div align="center">
+                                <h5 className="card-title" align="center">{selectedObject.productName}</h5>
                                 <p className="card-text" align="center">{selectedObject.price}</p>
                                 <p className="card-text" align="center">{selectedObject.quantity}</p>
-                                <p className="card-text">{selectedObject.productNo}</p>
-                                    <div align="center">
-                                    <button type="button" className="btn btn-light" onClick={this.handleCancel}>Cancel</button>
-                                    </div>
-                                </div>
+                                <p className="card-text" align="center">{selectedObject.productNo}</p>
+                                    
+                                <button type="button" className="btn btn-light" onClick={this.handleCancel}>Cancel</button>
+                            </div>
                             </div>
                         </div>
                     </div>

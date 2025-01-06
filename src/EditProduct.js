@@ -76,7 +76,8 @@ class EditProduct extends React.Component {
     render () {
         // console.log("EditProps", this.props);
         return (
-        <div className="card3">
+        <div align="center">
+            <h2>Edit Product Details</h2>
             <img 
                 src={"../assets/images/"+this.state.productNo}
                 onError={({ currentTarget }) => {
@@ -87,25 +88,16 @@ class EditProduct extends React.Component {
                 alt={this.state.productName}
             />
             <form onSubmit={this.handleFormSubmit}>
-                <div className='form-group'>
-                    <h1>Edit Product {this.state.productName}:</h1>
+                <div align="center">
+                    <h2>Edit Product: {this.state.productName}</h2>
                         <FormInput id="productName" title="productName" placeholder={this.state.productName} value={this.state.productName} onChange={this.updateProductName} />
                         <FormTextArea id="productNo" title="productNo" placeholder={this.state.productNo} value={this.state.productNo} onChange={this.updateProductNo} />
                         <FormInput id="productPrice" title="Price" placeholder={this.state.price} value={this.state.price} onChange={this.updatePrice} />
                         <FormInput id="productQuantity" title="Quantity" placeholder={this.state.quantity} value={this.state.quantity} onChange={this.updateQuantity} />
-
-                        {/*
                         
-                        <input type="text" className="form-control" id="albumTitle" placeholder="Enter a Title"/>
-                        <label for="albumArtist">Artist</label>
-                        <input type="text" className="form-control" id="albumArtist" placeholder="Artist Name"/>
-                        <label for="albumDescription">Description</label>
-                        <textarea type="text" className='form-control' id="albumDescription" placeholder="Write something about the album:"/>
-                        <label for="albumYear">Year</label>
-                        <input type="text" className="form-control" id="albumYear" placeholder="2022"/>*/}
-                </div>
                 <button type="button" className="btn btn-light" onClick={this.handleCancel}>Cancel</button>
                 <button type="submit" className="btn btn-primary">Submit</button>
+                </div>
             </form>
         </div>)
     }

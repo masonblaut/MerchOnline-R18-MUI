@@ -112,7 +112,6 @@ state = {productList : [], searchphrase : "", currentlySelectedproductId: 0, did
           {
             return (
               <div className="editProduct">
-                <Typography>Edit Product:</Typography>
                 <EditProduct productList={this.state.productList} currentlySelectedproductId={this.state.currentlySelectedproductId} onCancel={this.cancelEditProduct}/>
               </div>
             )
@@ -121,7 +120,6 @@ state = {productList : [], searchphrase : "", currentlySelectedproductId: 0, did
             {
               return (
                 <div className="deleteProduct">
-                  <Typography>Delete Product?</Typography>
                   <DeleteProduct productList={this.state.productList} currentlySelectedproductId={this.state.currentlySelectedproductId} onCancel={this.cancelDeleteProduct}/>
                 </div>
               )

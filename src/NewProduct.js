@@ -55,10 +55,10 @@ class NewProduct extends React.Component {
 
     render() {
         return (
-            <div className="container">
-                <div className='card2'>
+            <div>
+                <div align="center">
                     <form onSubmit={this.handleFormSubmit}>
-                        <div className='form-group'>
+                        <div align="center">
 
                             <h1>Create a New Product:</h1>
                             <FormInput
@@ -93,10 +93,9 @@ class NewProduct extends React.Component {
                                 onChange={this.updateQuantity}
                                 required
                             />
-
+                            <button type="button" onClick={this.handleCancel}>Cancel</button>
+                            <button type="submit">Submit</button>   
                         </div>
-                        <button type="button" className="btn btn-light" onClick={this.handleCancel}>Cancel</button>
-                        <button type="submit" className="btn btn-primary">Submit</button>
                     </form>
                 </div>
             </div>)

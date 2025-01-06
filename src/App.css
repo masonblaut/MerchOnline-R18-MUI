@@ -1,0 +1,23 @@
+.App {
+  font-family: 'Roboto', Roboto, monospace;
+}
+
+.appDiv {
+  background-color: #535c68;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.home, .register, .userprofile, .cart, .about, .logout, .footer{
+  padding-left:5%;
+  padding-right:5%;
+}
+
+.navLink {
+  color:white;
+}
+
+
